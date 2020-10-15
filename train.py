@@ -6,9 +6,9 @@ import numpy as np
 import math
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--word', metavar='w', help='Word to be guessed', default='hello')
+parser.add_argument('--word', metavar='w', help='Word to be guessed', default='hey')
 parser.add_argument('--popsize', metavar='p', help='Population size', default='961', type=int)
-parser.add_argument('--mutation', metavar='m', help='Mutation rate', default='0.1', type=float)
+parser.add_argument('--mutation', metavar='m', help='Mutation rate', default='0.2', type=float)
 parser.add_argument('--max_gen', metavar='g', help='Maximum generations', default=2000, type=int)
 args = vars(parser.parse_args())
 

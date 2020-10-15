@@ -35,9 +35,9 @@ class Unit(object):
     line_shape = reduce(operator.mul, shape, 1)
     line = self.representation.reshape(line_shape)
     mutation = np.random.rand(line_shape)
-    diff_line = np.where(mutation < rate, 0, 1)
-    new_line = (line + diff_line)
-    new_line = np.where(new_line > 0, 1, 0)
+    diff_line = np.where(mutation < rate, 1, 0)
+    new_line = diff_line - line
+    new_line = np.where(new_line < 0, 0, 1)
     self.representation = new_line.reshape(shape)
 
 
